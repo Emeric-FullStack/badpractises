@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page de Test avec Erreurs</title>
+    <!-- Mauvaise pratique : Inclusion de CSS en ligne -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0
+        }
+        /* Mauvaise pratique : Utilisation de IDs au lieu de classes pour le style */
+        #header {
+            color: blue;
+            text-align: center;
+        }
+        #content {
+            margin: 20px;
+        }
+        /* Erreur : Propriété CSS incorrecte */
+        p {
+            font-weigth: bold;
+        }
+        /* Mauvaise pratique : Utilisation de !important */
+        .important {
+            color: red !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Erreur : Balise non fermée -->
+    <div id="header">
+        <h1>Bienvenue sur la page de test
+    </div>
+
+    <div id="content">
+        <!-- Mauvaise pratique : Utilisation de tables pour la mise en page -->
+        <table>
+            <tr>
+                <td>Contenu de la page</td>
+                <td>
+                    <!-- Erreur : Attribut incorrect -->
+                    <img src="image.jpg" alts="Image de test">
+                </td>
+            </tr>
+        </table>
+
+        <!-- Erreur : Utilisation incorrecte de balises -->
+        <b><i>Texte en gras et italique</b></i>
+
+        <!-- Mauvaise pratique : Utilisation excessive de balises inline -->
+        <span style="color: green;">Texte en vert</span>
+
+        <!-- Erreur : Script JavaScript avec erreurs -->
+        <script>
+            function showMessage() {
+                alert("Ceci est un message de test);
+            }
+            // Mauvaise pratique : Utilisation de document.write
+            document.write("<p>Ce texte est ajouté via JavaScript.</p>");
+            // Erreur : Variable non déclarée
+            undeclaredVariable = "Ceci causera une erreur.";
+        </script>
+
+        <!-- Mauvaise pratique : Utilisation de balises dépréciées -->
+        <font color="purple">Texte en violet avec une balise dépréciée</font>
+    </div>
+
+    <!-- Erreur : Balise fermée sans être ouverte -->
+    </footer>
+</body>
+</html>
